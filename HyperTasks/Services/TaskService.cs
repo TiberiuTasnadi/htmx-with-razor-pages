@@ -18,5 +18,15 @@ public class TaskService : ITaskService
     }
 
     /// <inheritdoc/>
+    public void Remove(int id)
+    {
+        var task = _tasks.FirstOrDefault(t => t.Id == id);
+        if (task is not null)
+        {
+            _tasks.Remove(task);
+        }
+    }
+
+    /// <inheritdoc/>
     public List<Models.Task> GetAll() => _tasks;
 }

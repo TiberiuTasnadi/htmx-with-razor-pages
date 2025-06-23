@@ -14,6 +14,8 @@
 ## ✨ Features
 
 - Interactive task list with dynamic add functionality
+- Edit tasks in-place with dynamic form swapping
+- Delete tasks with confirmation dialogs
 - Built using Razor Pages (Server-Side Rendering)
 - Uses [htmx](https://htmx.org) for partial updates via `GET` and `POST`
 - No JavaScript frameworks required
@@ -60,7 +62,8 @@ https://localhost:PORT/
 │   ├── Tasks.cshtml
 │   ├── Tasks.cshtml.cs
 │   └── Shared/
-│       └── _TaskList.cshtml
+│       ├── _TaskList.cshtml
+│       └── _TaskEditForm.cshtml
 ├── wwwroot/
 │   ├── js/htmx.min.js
 │   ├── js/bootstrap.bundle.min.js
@@ -74,7 +77,8 @@ https://localhost:PORT/
 ![HTML Razor markup](./htmx1.PNG)
 
 - Uses `hx-get`, `hx-post`, `hx-target`, and `hx-swap`
-- Trigger on page load and form submit
+- Triggers on page load, form submit, and button clicks
+- Styled with Bootstrap classes
 
 ---
 
@@ -83,22 +87,26 @@ https://localhost:PORT/
 ![OnGet / OnPost handlers](./htmx3.PNG)
 
 - `OnGetList()` returns the rendered task list
-- `OnPostAdd()` adds a new task and returns updated list
+- `OnPostAdd()` adds a new task
+- `OnPostDelete()` deletes an existing task
+- `OnGetEditForm()` shows inline edit form
+- `OnPostEdit()` saves updated task data
 
 ---
 
-## 🧱 Partial View (`_TaskList.cshtml`)
+## 🧱 Partials
 
-![Partial view screenshot](./htmx4.PNG)
+### `_TaskList.cshtml`
 
-Renders tasks using Bootstrap:
+Renders tasks using Bootstrap with edit/delete buttons:
 
-```html
-<ul class="list-group">
-  <li class="list-group-item">Task 1</li>
-  <li class="list-group-item">Task 2</li>
-</ul>
-```
+![Partial view source code](./htmx5.PNG)
+
+### `_TaskEditForm.cshtml`
+
+Inline edit form rendered dynamically:
+
+![Partial edit form code](./htmx6.PNG)
 
 ---
 
@@ -110,6 +118,7 @@ This project demonstrates:
 - How htmx allows server-driven UI updates
 - How Razor Pages enable SSR with minimal setup
 - How to avoid overengineering with JS frameworks
+- How to implement in-place editing with HTML partials and handlers
 
 ---
 

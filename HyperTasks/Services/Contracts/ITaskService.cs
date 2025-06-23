@@ -20,4 +20,10 @@ public interface ITaskService
     /// </summary>
     /// <param name="description">The task description.</param>
     public void Add(string description);
+
+    /// <summary>
+    /// Removes a task by its unique identifier.
+    /// </summary>
+    /// <param name="id">The id of the task to remove.</param>
+    public void Remove(int id);
 }

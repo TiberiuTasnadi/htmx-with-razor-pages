@@ -1,0 +1,19 @@
+﻿@model HyperTasks.Models.Task
+
+<form method="post"
+      hx-post="/Tasks?handler=Edit"
+      hx-target="#task-list"
+      hx-swap="innerHTML"
+      style="margin: 10px"
+      class="d-flex gap-2 align-items-center">
+
+    <input type="hidden" name="TaskEdit.Id" value="@Model.Id" />
+
+    <input type="text"
+           name="TaskEdit.Description"
+           value="@Model.Description"
+           class="form-control form-control-sm"
+           style="max-width: 300px;" />
+
+    <button type="submit" class="btn btn-sm btn-success">Save</button>
+</form>
