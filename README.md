@@ -7,7 +7,7 @@
 
 ## 📸 Preview
 
-![Screenshot of the final result](./htmx.PNG)
+![Screenshot of the final result](./img/htmx.PNG)
 
 ---
 
@@ -74,7 +74,7 @@ https://localhost:PORT/
 
 ## 🧩 Core HTML (Page: `Tasks.cshtml`)
 
-![HTML Razor markup](./htmx1.PNG)
+![HTML Razor markup](./img/htmx2.PNG)
 
 - Uses `hx-get`, `hx-post`, `hx-target`, and `hx-swap`
 - Triggers on page load, form submit, and button clicks
@@ -84,7 +84,7 @@ https://localhost:PORT/
 
 ## 🎯 Handlers (`Tasks.cshtml.cs`)
 
-![OnGet / OnPost handlers](./htmx3.PNG)
+![OnGet / OnPost handlers](./img/htmx3.PNG)
 
 - `OnGetList()` returns the rendered task list
 - `OnPostAdd()` adds a new task
@@ -100,13 +100,13 @@ https://localhost:PORT/
 
 Renders tasks using Bootstrap with edit/delete buttons:
 
-![Partial view source code](./htmx5.PNG)
+![Partial view source code](./img/htmx5.PNG)
 
 ### `_TaskEditForm.cshtml`
 
 Inline edit form rendered dynamically:
 
-![Partial edit form code](./htmx6.PNG)
+![Partial edit form code](./img/htmx6.PNG)
 
 ---
 
