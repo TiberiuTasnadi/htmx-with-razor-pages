@@ -1,0 +1,22 @@
+﻿@page
+@model HyperTasks.Pages.TasksModel
+
+<div class="container mt-5">
+    <h2 class="mb-4">Tasks</h2>
+
+    <form method="post"
+          hx-post="/Tasks?handler=Add"
+          hx-target="#task-list"
+          hx-swap="innerHTML"
+          class="d-flex gap-2 mb-4">
+        <input name="description" class="form-control" placeholder="New task" />
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+
+    <div id="task-list"
+         hx-get="/Tasks?handler=List"
+         hx-trigger="load"
+         hx-swap="innerHTML">
+        <div class="text-muted">Loading tasks...</div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperTasks", "HyperTasks.csproj", "{879CD31C-E519-42FA-AB1E-45C08B1BC389}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{879CD31C-E519-42FA-AB1E-45C08B1BC389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879CD31C-E519-42FA-AB1E-45C08B1BC389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879CD31C-E519-42FA-AB1E-45C08B1BC389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879CD31C-E519-42FA-AB1E-45C08B1BC389}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {922E54A5-73DA-49A8-BDEC-974E8F2542D5}
+	EndGlobalSection
+EndGlobal
